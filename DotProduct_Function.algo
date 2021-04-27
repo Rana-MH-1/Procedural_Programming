@@ -1,6 +1,6 @@
-FUNCTION dot_product(var T1 : ARRAY_OF FLOAT[3], var T2 : ARRAY_OF FLOAT[3]) : FLOAT
+FUNCTION dot_product(T1 : ARRAY_OF FLOAT[3], T2 : ARRAY_OF FLOAT[3], var ps:INTEGER) : FLOAT
 VAR
-    ps:FLOAT:=0;
+    
 BEGIN
     FOR i FROM 0 TO T1.length-1 DO
         FOR j FROM i TO T2.length-1 DO
@@ -15,7 +15,7 @@ VAR
     n: INTEGER;
     k:INTEGER:=1
     v1,v2: ARRAY_OF FLOAT[3];
-    dotP : FLOAT;
+    ps:FLOAT:=0;
 BEGIN
     read(n);
     REPEAT
@@ -23,8 +23,8 @@ BEGIN
         read(v1);
         write("type the second vector v2");
         read(v2);
-        dotP:= dot_product(v1,v2);
-        IF (dotP = 0) THEN
+        ps:= dot_product(v1,v2);
+        IF (ps = 0) THEN
             write("The two vectors of given IR are orthogonals");
         ELSE write("The two vectors of given IR aren't orthogonals");
         END_IF
