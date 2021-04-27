@@ -1,4 +1,4 @@
-PROCEDURE dot_product(var T1 : ARRAY_OF FLOAT[3], var T2 : ARRAY_OF FLOAT[3])
+PROCEDURE dot_product( T1 : ARRAY_OF FLOAT[3], T2 : ARRAY_OF FLOAT[3])
 VAR
     i,j: INTEGER;
     ps:FLOAT:=0;
